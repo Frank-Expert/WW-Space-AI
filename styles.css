@@ -1,0 +1,906 @@
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: black;
+    color: white;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    line-height: 1.6;
+    font-size: 16px;
+    font-weight: lighter;
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #000000;
+    padding: 10px 20px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+    animation: slideInFromTop 1s ease-in-out;
+    font-weight: lighter;
+}
+
+
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.logo {
+    flex: 1;
+}
+
+.logo img {
+    width: 120px; /* Adjusted width for smaller logo */
+    transition: transform 0.5s ease;
+}
+
+.logo img:hover {
+    transform: rotate(360deg);
+}
+
+nav {
+    flex: 3;
+    display: flex;
+    justify-content: flex-end; /* Align navigation to the right */
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 0px; /* Reduced gap for a more compact look */
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    position: relative;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px; /* Reduced font size */
+    position: relative;
+    padding: 10px;
+    transition: color 0.3s ease;
+    display: flex;
+    align-items: center;
+}
+
+nav ul li a:hover {
+    color: #ff4040;
+}
+
+nav ul li a::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    background-color: red;
+    bottom: 0;
+    left: 0;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.3s ease;
+}
+
+nav ul li a:hover::before {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+/* Icons for Menu Items */
+
+
+.search-bar {
+    flex: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.search-bar input {
+    padding: 5px;
+    border: 2px solid #1d3396;
+    background-color: #000;
+    color: #fff;
+    border-radius: 4px 0 0 4px;
+    outline: none;
+    width: 280px; /* Adjusted width for smaller search bar */
+}
+
+.search-bar button {
+    padding: 5px 10px;
+    border: 2px solid #000;
+    background-color: #000;
+    color: #fff;
+    border-radius: 0 4px 4px 0;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.search-bar button:hover {
+    background-color: #fff;
+    color: #000;
+}
+
+/* Animations */
+@keyframes slideInFromTop {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+
+.hero-section {
+    text-align: center;
+    padding: 100px 20px;
+    background-image: url('images/vision.JPG'); /* Replace with a suitable image */
+    background-size: cover;
+    background-position: center;
+    animation: fadeIn 2s ease-in-out;
+    
+}
+
+.hero-section h1 {
+    font-size: 50px;
+    margin-bottom: 20px;
+    animation: textZoom 2s ease-in-out;
+    background: linear-gradient(90deg, #ff4040, #ff8c00);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.hero-section p {
+    font-size: 24px;
+    animation: fadeInUp 2s ease-in-out;
+}
+
+
+
+/* Services Section */
+.services {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 50px 20px;
+    animation: fadeInUp 2s ease-in-out;
+    text-align: center;
+}
+
+.service {
+    background-color: #111;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    animation: zoomIn 1s ease-in-out;
+    position: relative;
+    
+}
+
+#services h2 {
+    font-size: 28px;
+    margin-bottom: 25px;
+    color: #ff6b6b;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    position: relative;
+    animation: fadeInSlide 1.5s ease-in-out;
+    display: inline-block;
+    width: 100%;
+}
+
+.service:nth-child(even) {
+    animation: bounceIn 1.5s ease-in-out;
+}
+
+.service:hover {
+    transform: scale(1.05);
+    background-color: #333;
+}
+
+.service img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    transition: transform 0.5s ease;
+}
+
+.service img:hover {
+    transform: rotate(-10deg) scale(1.1);
+}
+
+.service h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    background: linear-gradient(90deg, #00ff7f, #1e90ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: fadeInLeft 1s ease-in-out;
+}
+
+.service p {
+    font-size: 18px;
+    animation: fadeInRight 1.5s ease-in-out;
+}
+
+
+
+/* Products Section Styling */
+#products {
+    padding: 60px 20px;
+    color: #fff;
+    text-align: center;
+}
+
+#products h2 {
+    font-size: 28px;
+    margin-bottom: 25px;
+    color: #ff6b6b;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    position: relative;
+    animation: fadeInSlide 1.5s ease-in-out;
+    display: inline-block;
+    width: 100%;
+}
+
+/* Product Group Styling */
+.product-group {
+    display: inline-block;
+    margin: 0 30px;
+    text-align: left;
+    padding: 20px;
+    position: relative;
+    transition: transform 0.3s ease, color 0.3s ease;
+    vertical-align: top; /* Ensures all items align at the top */
+}
+
+.product-group:not(:last-child)::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: -15px; /* Adjust as needed to align with text */
+    width: 2px;
+    height: 100%;
+    background-color: #ff6b6b;
+}
+
+.product-group h3 {
+    font-size: 18px;
+    margin-bottom: 20px;
+    color: #00bfff;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    position: relative;
+    animation: slideInLeft 1.8s ease-in-out;
+}
+
+.product-group ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.product-group ul li {
+    font-size: 14px;
+    margin: 10px 0;
+    color: #ddd;
+    letter-spacing: 1px;
+    position: relative;
+    padding-left: 20px;
+    cursor: pointer;
+    transition: color 0.3s ease, transform 0.3s ease;
+    animation: fadeInUp 2s ease-in-out;
+}
+
+.product-group ul li::before {
+    content: '→';
+    position: absolute;
+    left: 0;
+    color: #ff6b6b;
+    transition: transform 0.3s ease;
+}
+
+.product-group ul li:hover {
+    color: #ff6b6b;
+    transform: translateX(10px);
+}
+
+.product-group ul li:hover::before {
+    transform: translateX(5px);
+}
+
+.product-group:hover {
+    transform: translateY(-10px);
+    color: #ff6b6b;
+}
+
+/* Animations */
+@keyframes fadeInSlide {
+    from { opacity: 0; transform: translateY(-30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideInLeft {
+    from { opacity: 0; transform: translateX(-50px); }
+    to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+
+
+/* Research Section Styling */
+#research {
+    padding: 80px 20px;
+    background: linear-gradient(135deg, #000, #222);
+    color: #fff;
+    text-align: center;
+    overflow: hidden;
+}
+
+#research h2 {
+    font-size: 42px;
+    margin-bottom: 30px;
+    letter-spacing: 2px;
+    color: #ff6b6b;
+    text-transform: uppercase;
+    position: relative;
+    display: inline-block;
+    animation: textSlideIn 1.5s ease-in-out;
+}
+
+#research h2::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: #ff6b6b;
+    bottom: -10px;
+    left: 0;
+    animation: expandLine 2s ease-in-out forwards;
+}
+
+#research p {
+    font-size: 20px;
+    max-width: 900px;
+    margin: 0 auto 50px;
+    color: #ddd;
+    animation: fadeInSlide 2s ease-in-out;
+    line-height: 1.6;
+}
+
+/* Vision, Mission, Goals Styling */
+#research .vision, #research .mission, #research .goals {
+    margin-bottom: 60px;
+    padding: 30px;
+    background-color: #333;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
+    transform: scale(0.95);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+#research .vision:hover, #research .mission:hover, #research .goals:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 30px rgba(255, 107, 107, 0.7);
+}
+
+#research .vision img, #research .mission img, #research .goals img {
+    width: 80%;
+    max-width: 350px;
+    border-radius: 50%;
+    margin-bottom: 25px;
+    border: 5px solid #ff6b6b;
+    transition: transform 0.4s ease;
+}
+
+#research .vision:hover img, #research .mission:hover img, #research .goals:hover img {
+    transform: rotate(360deg);
+}
+
+#research h3 {
+    font-size: 32px;
+    margin-bottom: 20px;
+    color: #ff6b6b;
+    position: relative;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    animation: fadeInZoom 1.8s ease-in-out;
+}
+
+#research .vision p, #research .mission p, #research .goals p {
+    font-size: 18px;
+    color: #bbb;
+    line-height: 1.8;
+    animation: fadeInUp 2s ease-in-out;
+}
+
+#research .vision::before, #research .mission::before, #research .goals::before {
+    content: '';
+    position: absolute;
+    width: 120%;
+    height: 120%;
+    background: rgba(255, 107, 107, 0.1);
+    top: -10%;
+    left: -10%;
+    transform: rotate(-45deg);
+    z-index: -1;
+    transition: opacity 0.4s ease, transform 0.4s ease;
+    opacity: 0;
+}
+
+#research .vision:hover::before, #research .mission:hover::before, #research .goals:hover::before {
+    opacity: 1;
+    transform: rotate(0deg);
+}
+
+/* Scroll Effect */
+#research .vision, #research .mission, #research .goals {
+    opacity: 0;
+    transform: translateY(100px);
+    animation: fadeInScroll 1s ease forwards;
+}
+
+#research .vision {
+    animation-delay: 0.2s;
+}
+
+#research .mission {
+    animation-delay: 0.4s;
+}
+
+#research .goals {
+    animation-delay: 0.6s;
+}
+
+/* Animations */
+@keyframes fadeInSlide {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes textSlideIn {
+    from { opacity: 0; transform: translateX(-100%); }
+    to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes expandLine {
+    from { width: 0%; }
+    to { width: 100%; }
+}
+
+@keyframes fadeInZoom {
+    from { opacity: 0; transform: scale(0.8); }
+    to { opacity: 1; transform: scale(1); }
+}
+
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(50px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInScroll {
+    to { opacity: 1; transform: translateY(0); }
+}
+
+
+/* Resources Section Styling */
+#resources {
+    padding: 70px 20px;
+    color: #fff;
+    text-align: center;
+}
+
+#resources h2 {
+    font-size: 28px;
+    margin-bottom: 25px;
+    letter-spacing: 1.5px;
+    color: #ff6b6b;
+    text-transform: uppercase;
+    position: relative;
+    display: inline-block;
+    animation: textSlideIn 1.5s ease-in-out;
+    font-weight: lighter;
+}
+
+#resources p {
+    font-size: 18px;
+    max-width: 800px;
+    margin: 0 auto 40px;
+    color: #ddd;
+    animation: fadeInUp 2s ease-in-out;
+    
+}
+
+/* Resource Items Styling */
+.resource-item {
+    margin-bottom: 40px;
+    padding: 20px;
+    border: 2px solid #ff6b6b;
+    border-radius: 10px;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    animation: fadeInSlide 2s ease-in-out;
+    
+}
+
+.resource-item:hover {
+    transform: translateY(-10px);
+    border-color: #00bfff;
+}
+
+.resource-item h3 {
+    font-size: 18px;
+    margin-bottom: 15px;
+    color: #ff6b6b;
+    position: relative;
+    animation: slideInLeft 1.8s ease-in-out;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight:50;
+
+}
+
+.resource-item p {
+    font-size: 16px;
+    color: #bbb;
+    line-height: 1.6;
+    animation: fadeInUp 2s ease-in-out;
+}
+
+.resource-item::before {
+    content: '';
+    position: absolute;
+    width: 120%;
+    height: 2px;
+    background-color: #ff6b6b;
+    top: 0;
+    left: -10%;
+    transform: rotate(-45deg);
+    transition: opacity 0.4s ease, transform 0.4s ease;
+    opacity: 0;
+}
+
+.resource-item:hover::before {
+    opacity: 1;
+    transform: rotate(0deg);
+}
+
+/* Animations */
+@keyframes fadeInSlide {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes textSlideIn {
+    from { opacity: 0; transform: translateX(-100%); }
+    to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(50px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideInLeft {
+    from { opacity: 0; transform: translateX(-50px); }
+    to { opacity: 1; transform: translateX(0); }
+}
+
+
+/* Pricing Section */
+#pricing {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #111;
+    color: white;
+    animation: fadeInRight 2s ease-in-out;
+}
+
+#pricing ul {
+    list-style: none;
+    padding: 0;
+}
+
+#pricing ul li {
+    font-size: 22px;
+    margin: 10px 0;
+    animation: zoomIn 1s ease-out;
+    padding: 15px;
+    background-color: #333;
+    border-radius: 5px;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+#pricing ul li:hover {
+    transform: scale(1.1);
+    background-color: #555;
+}
+
+
+
+
+/* Company Section Styling */
+#company {
+    padding: 60px 20px;
+    color: #fff;
+    text-align: center;
+}
+
+#company h2 {
+    font-size: 28px;
+    margin-bottom: 30px;
+    color: #ff6b6b;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    animation: fadeInSlide 1.5s ease-in-out;
+    font-weight: lighter;
+}
+
+.company-group {
+    display: inline-block;
+    width: 22%;
+    margin: 20px 0;
+    padding: 20px;
+    text-align: left;
+    position: relative;
+    border-left: 2px solid #ff6b6b;
+    transition: transform 0.3s ease, color 0.3s ease;
+    animation: fadeInUp 2s ease-in-out;
+    
+}
+
+.company-group:not(:last-child) {
+    border-left: 2px solid #6d5151;
+    padding-left: 30px;
+}
+
+.company-group a h3 {
+    font-size: 18px;
+    color: #00bfff;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+    text-decoration: none;
+    position: relative;
+    transition: color 0.3s ease, transform 0.3s ease;
+    display: flex;
+    align-items: center;
+    font-weight: lighter;
+}
+
+.company-group a h3 i {
+    margin-right: 10px;
+    color: #ff6b6b;
+}
+
+.company-group a h3:hover {
+    color: #ff6b6b;
+    transform: translateX(5px);
+}
+
+.company-group p {
+    font-size: 16px;
+    color: #ddd;
+    margin: 0;
+    transition: color 0.3s ease;
+}
+
+.company-group:hover {
+    transform: translateY(-10px);
+}
+
+.company-group:hover p {
+    color: #ff6b6b;
+}
+
+/* Animations */
+@keyframes fadeInSlide {
+    from { opacity: 0; transform: translateY(-30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+
+/* Footer Styling */
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 30px;
+    color: #4b4343;
+    border-top: 1px solid #7570709a; /* Optional: Adds a subtle border at the top */
+}
+
+footer p {
+    margin: 0;
+    font-size: 1rem;
+}
+
+.social-icons {
+    display: flex;
+    align-items: center;
+    gap: 35px;
+}
+
+.social-icons .icon {
+    font-size: 1.2rem; /* Adjust size as needed */
+    color: #fff; /* Default color */
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.social-icons .icon:hover {
+    color: #ff6b6b; /* Hover color */
+    transform: scale(1.2); /* Zoom effect on hover */
+}
+
+/* Font Awesome Icons */
+.fas, .fab {
+    font-family: 'Font Awesome 5 Free', 'Font Awesome 5 Brands';
+    font-weight: 900;
+}
+
+
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeInRight {
+    from:
+        opacity: 0;
+        transform: translateX(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInFromLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInFromTop {
+    from {
+        opacity: 0;
+        transform: translateY(-100%);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes zoomIn {
+    from {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes bounceIn {
+    0%,
+    20%,
+    50%,
+    80%,
+    100% {
+        transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+    }
+    0% {
+        opacity: 0;
+        transform: scale3d(0.3, 0.3, 0.3);
+    }
+    20% {
+        transform: scale3d(1.1, 1.1, 1.1);
+    }
+    50% {
+        transform: scale3d(0.9, 0.9, 0.9);
+    }
+    80% {
+        transform: scale3d(1.03, 1.03, 1.03);
+        opacity: 1;
+    }
+    100% {
+        transform: scale3d(1, 1, 1);
+        opacity: 1;
+    }
+}
+
+@keyframes textZoom {
+    0% {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+    50% {
+        transform: scale(1.1);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes rotateIn {
+    from {
+        opacity: 0;
+        transform: rotate(-200deg);
+    }
+    to {
+        opacity: 1;
+        transform: rotate(0deg);
+    }
+}
