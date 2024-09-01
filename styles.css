@@ -142,16 +142,20 @@ nav ul li a:hover::before {
 
 
 @keyframes slideImages {
-    0% { background-image: url('images/ai.JPG'); }
-    12.5% { background-image: url('images/software-dev.PNG'); }
-    25% { background-image: url('images/mobile-apps.PNG'); }
-    37.5% { background-image: url('images/desktop-apps.JPG'); }
-    50% { background-image: url('images/macosapps.JPG'); }
-    62.5% { background-image: url('images/web-devel.JPG'); }
-    75% { background-image: url('images/Cybersecurity-2.PNG'); }
-    87.5% { background-image: url('images/blockchain.JPG'); }
-    100% { background-image: url('images/Industrial-Robotics-AI-Machine-Learning.JPEG'); }
+    0% { background-image: url('hero/aih.jpg'); }
+    9.1% { background-image: url('hero/aig.jpg'); }
+    18.2% { background-image: url('hero/wapps.jpg'); }
+    27.3% { background-image: url('hero/webdv.jpg'); }
+    36.4% { background-image: url('hero/mob.jpg'); }
+    45.5% { background-image: url('hero/mobapps.jpg'); }
+    54.6% { background-image: url('hero/macos.jpg'); }
+    63.7% { background-image: url('hero/cybersec.jpg'); }
+    72.8% { background-image: url('hero/cybsecurity.jpg'); }
+    81.9% { background-image: url('hero/blockchain.jpg'); }
+    91% { background-image: url('hero/blockch.jpg'); }
+    100% { background-image: url('hero/robot.jpg'); }
 }
+
 
 .hero-section {
     text-align: center;
