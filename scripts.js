@@ -40,26 +40,46 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 //RESEARCH RESPONSIVE scrollBehavior: 
-<script>
-    document.addEventListener('DOMContentLoaded', function () {
-        var elements = document.querySelectorAll('.scroll-animation');
-        var options = {
-            root: null,
-            rootMargin: '0px',
-            threshold: 0.1
-        };
 
-        var observer = new IntersectionObserver(function (entries, observer) {
-            entries.forEach(function (entry) {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('scroll-animate');
-                    observer.unobserve(entry.target);
-                }
-            });
-        }, options);
+document.addEventListener('DOMContentLoaded', function () {
+    var elements = document.querySelectorAll('.scroll-animation');
+    var options = {
+        root: null,
+        rootMargin: '0px',
+        threshold: 0.1
+    };
 
-        elements.forEach(function (element) {
-            observer.observe(element);
+    var observer = new IntersectionObserver(function (entries, observer) {
+        entries.forEach(function (entry) {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('scroll-animate');
+                observer.unobserve(entry.target);
+            }
         });
+    }, options);
+
+    elements.forEach(function (element) {
+        observer.observe(element);
     });
-</script>
+});
+
+
+
+
+//RESOURCES
+// Event listener for the chat button
+document.getElementById('chat-button').addEventListener('click', function() {
+    alert('Chat with our support team will be available soon!'); // Placeholder alert for chat functionality
+});
+
+// Consultant form submission handler
+document.getElementById('consultant-form').addEventListener('submit', function(event) {
+    event.preventDefault(); // Prevent form from submitting
+    alert('Thank you for submitting the form. Our consultant will contact you soon!');
+});
+
+// Partner form submission handler
+document.getElementById('partner-form').addEventListener('submit', function(event) {
+    event.preventDefault(); // Prevent form from submitting
+    alert('Your partnership request has been submitted!');
+});

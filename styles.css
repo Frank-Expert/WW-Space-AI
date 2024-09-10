@@ -754,7 +754,7 @@ nav ul li a:hover::before {
 /* General Styles for Research Section */
 #research {
     padding: 80px 20px;
-    background: linear-gradient(135deg, #000, #2e0a0a);
+    background: linear-gradient(135deg, #000, #140d0d);
     color: #fff;
     text-align: center;
     overflow: hidden;
@@ -922,111 +922,356 @@ nav ul li a:hover::before {
 
 
 /* Resources Section Styling */
+/* Reset for the entire resources section */
+#resources * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Section Background */
 #resources {
-    padding: 70px 20px;
+    background: linear-gradient(to right, #0d2331, #071f11);
+    padding: 50px 20px;
     color: #fff;
+}
+
+/* Title Styling */
+#resources h2 {
+    font-size: 2.8rem;
+    color: #969090;
+    margin-bottom: 30px;
+    background: linear-gradient(to right, #f39c12, #e74c3c);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
     text-align: center;
 }
 
-#resources h2 {
-    font-size: 28px;
-    margin-bottom: 25px;
-    letter-spacing: 1.5px;
-    color: #ff6b6b;
-    text-transform: uppercase;
-    position: relative;
-    display: inline-block;
-    animation: textSlideIn 1.5s ease-in-out;
-    font-weight: lighter;
-}
-
+/* Paragraphs - Center Align */
 #resources p {
-    font-size: 18px;
+    font-size: 1.2rem;
+    color: rgba(230, 222, 222, 0.8);
     max-width: 800px;
-    margin: 0 auto 40px;
-    color: #ddd;
-    animation: fadeInUp 2s ease-in-out;
-    
+    margin: 0 auto 40px auto;
+    line-height: 1.8;
+    text-align: center;
 }
 
-/* Resource Items Styling */
-.resource-item {
-    margin-bottom: 40px;
-    padding: 20px;
-    border: 2px solid #ff6b6b;
+/* Resource Item Cards */
+#resources .resource-item {
+    background: linear-gradient(to right, #0b0a0f, #0c0b0b);
+    color: #e7dfdf;
     border-radius: 10px;
-    transition: transform 0.3s ease, border-color 0.3s ease;
-    position: relative;
-    overflow: hidden;
-    animation: fadeInSlide 2s ease-in-out;
+    padding: 30px;
+    margin-bottom: 25px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: left; /* Left-align for readability */
+}
+
+#resources .resource-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+}
+
+/* Resource Item Title */
+#resources .resource-item h3 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+    background: linear-gradient(to right, #8e44ad, #3498db);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-align: center;
+}
+
+/* Blog Preview Styling */
+#resources .blog-preview {
+    background: linear-gradient(to right, #191b1b, #110606);
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+#resources .blog-preview h4 {
+    font-size: 1.6rem;
+    background: linear-gradient(to right, #f39c12, #e74c3c);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+#resources .blog-preview p {
+    color: #ffffff;
+    text-align: justify; /* Justify text for neatness */
+}
+
+
+
+/* Read More Button */
+.resource-item .blog-preview a {
+    display: inline-block;
+    padding: 12px 25px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    width: 150px;
+    color: #ffffff;
+    background: linear-gradient(to right, #3498db, #2ecc71); /* Gradient background */
+    text-decoration: none;
+    border-radius: 30px;
+    transition: background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.resource-item .blog-preview a:hover {
+    background: linear-gradient(to right, #2ecc71, #3498db); /* Hover effect changes gradient direction */
+    transform: translateY(-3px); /* Slight lift on hover */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2); /* Slight shadow increase on hover */
+}
+
+
+
+/* Centered Search Bar */
+#resources .help-search {
+    width: 60%; /* Reduced width for better balance */
+    padding: 15px;
+    border-radius: 50px;
+    border: 2px solid #1d1c1c;
+    margin-bottom: 30px;
+    font-size: 1rem;
+    background-color: #222121;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+
+/* WSpace AI Academy Section */
+/* Academy Button */
+#resources .academy-link {
+    display: block; /* Make the link behave like a block element */
+    width: fit-content; /* Fit the width of the content */
+    margin: 0 auto; /* Center the button */
+    padding: 12px 35px;
+    background: linear-gradient(to right, #1abc9c, #16a085);
+    color: white;
+    border-radius: 30px;
+    font-size: 1.1rem;
+    text-decoration: none;
+    transition: background 0.3s ease, transform 0.3s ease;
+    margin-top: 20px; /* Adds space between the paragraph and button */
+}
+
+#resources .academy-link:hover {
+    background: linear-gradient(to right, #16a085, #1abc9c);
+    transform: translateY(-2px); /* Adds a small hover effect */
+}
+
+
+
+
+
+
+
+
+/* Chat Support Button */
+#resources .chat-support button {
+    padding: 12px 30px;
+    background: linear-gradient(to right, #2ecc71, #27ae60);
+    color: white;
+    border: none;
+    border-radius: 30px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    text-align: center;
     
 }
 
-.resource-item:hover {
-    transform: translateY(-10px);
-    border-color: #00bfff;
+#resources .chat-support button:hover {
+    background: linear-gradient(to right, #27ae60, #2ecc71);
 }
 
-.resource-item h3 {
-    font-size: 18px;
+/* Resource Form - Submit Button */
+#resources form.resource-form button {
+    padding: 12px 35px;
+    background: linear-gradient(to right, #3498db, #2980b9);
+    color: white;
+    border: none;
+    border-radius: 30px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#resources form.resource-form button:hover {
+    background: linear-gradient(to right, #2980b9, #3498db);
+}
+
+/* Written Guide */
+#resources .written-guide {
+    background: linear-gradient(to right, #242222, #151220);
+    padding: 25px;
+    border-radius: 10px;
+    margin-top: 25px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: left; /* Left-aligned for better reading */
+}
+
+#resources .written-guide h4 {
+    font-size: 1.5rem;
+    background: linear-gradient(to right, #2980b9, #8e44ad);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 10px;
+}
+
+/* Resource Form - Text Areas and Inputs */
+#resources form.resource-form {
+    margin-top: 30px;
+    background: linear-gradient(to right, #ffffff, #f7f7f7);
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+
+
+
+
+
+/* Smaller video thumbnails for video guides */
+#resources .video-guide video,
+#resources .recorded-webinars video {
+    width: 250px;
+    height: 150px;
+    border-radius: 15px;
+    margin-top: 20px;
+    cursor: pointer;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease;
+}
+
+#resources .video-guide video:hover,
+#resources .recorded-webinars video:hover {
+    transform: scale(1.15); /* Enlarges on hover */
+}
+
+
+
+
+
+/* General Styling for Form Containers */
+/* Hire a Consultant and Become a Partner Form Container */
+#consultant-form, #partner-form {
+    background: linear-gradient(to right, #535353, #2b1717);
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Form Headers */
+#resources .resource-item h3 {
+    font-size: 2rem;
+    color: #f8fafc;
+    text-align: center;
+    margin-bottom: 20px;
+    background: linear-gradient(to right, #8e44ad, #3498db);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Input and Textarea Styles */
+#consultant-form input, #partner-form input, 
+#consultant-form textarea, #partner-form select {
+    width: 100%;
+    padding: 15px;
     margin-bottom: 15px;
-    color: #ff6b6b;
-    position: relative;
-    animation: slideInLeft 1.8s ease-in-out;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    font-weight:50;
-
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    font-size: 1rem;
+    background-color: #f9f9f9;
+    color: #f7f4f4;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
-.resource-item p {
-    font-size: 16px;
-    color: #bbb;
-    line-height: 1.6;
-    animation: fadeInUp 2s ease-in-out;
+/* Focus State for Inputs */
+#consultant-form input:focus, #partner-form input:focus,
+#consultant-form textarea:focus, #partner-form select:focus {
+    border-color: #3498db;
+    box-shadow: 0 0 10px rgba(52, 152, 219, 0.2);
+    outline: none;
 }
 
-.resource-item::before {
-    content: '';
-    position: absolute;
-    width: 120%;
-    height: 2px;
-    background-color: #ff6b6b;
-    top: 0;
-    left: -10%;
-    transform: rotate(-45deg);
-    transition: opacity 0.4s ease, transform 0.4s ease;
-    opacity: 0;
+/* Textarea for Project Description */
+#consultant-form textarea {
+    height: 150px;
+    resize: vertical;
+    text-indent: 10px; /* Indent for better readability */
 }
 
-.resource-item:hover::before {
-    opacity: 1;
-    transform: rotate(0deg);
+/* Labels */
+#consultant-form label, #partner-form label {
+    font-size: 1.1rem;
+    margin-bottom: 5px;
+    color: #b42430;
+    display: block;
+    font-weight: bold;
 }
 
-/* Animations */
-@keyframes fadeInSlide {
-    from { opacity: 0; transform: translateY(30px); }
-    to { opacity: 1; transform: translateY(0); }
+/* Buttons */
+#consultant-form button, #partner-form button {
+    background: linear-gradient(to right, #3498db, #2980b9);
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    font-size: 1.1rem;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.3s ease;
+    display: block;
+    margin: 20px auto;
 }
 
-@keyframes textSlideIn {
-    from { opacity: 0; transform: translateX(-100%); }
-    to { opacity: 1; transform: translateX(0); }
+#consultant-form button:hover, #partner-form button:hover {
+    background: linear-gradient(to right, #2980b9, #3498db);
+    transform: translateY(-3px); /* Slight lift on hover */
 }
 
-@keyframes fadeInUp {
-    from { opacity: 0; transform: translateY(50px); }
-    to { opacity: 1; transform: translateY(0); }
+/* Payment Method Dropdown */
+#partner-form select {
+    padding: 15px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    font-size: 1rem;
+    color: #333;
 }
 
-@keyframes slideInLeft {
-    from { opacity: 0; transform: translateX(-50px); }
-    to { opacity: 1; transform: translateX(0); }
+/* Alignment for Form Inputs */
+#consultant-form input[type="text"],
+#consultant-form input[type="email"],
+#partner-form input[type="text"],
+#partner-form input[type="email"] {
+    text-align: left;
 }
 
-
-
+/* Center Aligning Form Buttons */
+#consultant-form button, #partner-form button {
+    display: block;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
 
 
 
