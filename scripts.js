@@ -83,3 +83,31 @@ document.getElementById('partner-form').addEventListener('submit', function(even
     event.preventDefault(); // Prevent form from submitting
     alert('Your partnership request has been submitted!');
 });
+
+
+
+//HELP CENTER QUESTION
+document.addEventListener('DOMContentLoaded', function() {
+    const faqItems = document.querySelectorAll('#resources .faq-item');
+
+    faqItems.forEach(item => {
+        const questionButton = item.querySelector('.faq-question');
+        const answerDiv = item.querySelector('.faq-answer');
+
+        questionButton.addEventListener('click', function() {
+            // Close all answers
+            faqItems.forEach(otherItem => {
+                if (otherItem !== item) {
+                    otherItem.querySelector('.faq-answer').style.display = 'none';
+                }
+            });
+
+            // Toggle the clicked answer
+            if (answerDiv.style.display === 'block') {
+                answerDiv.style.display = 'none';
+            } else {
+                answerDiv.style.display = 'block';
+            }
+        });
+    });
+});

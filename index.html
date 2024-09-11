@@ -534,21 +534,75 @@
         </div>
 
         <!-- Help Center Section -->
+        <!-- Help Center Section -->
         <div class="resource-item">
             <h3>Help Center</h3>
-            <p>Get answers with our comprehensive Help Center.</p>
+            <span class="resource-help-text">Get answers with our comprehensive Help Center.</span>
+
+            <!-- Search Bar -->
             <input type="text" id="search-bar" placeholder="Search help articles..." class="help-search">
+
+            <!-- FAQs Section -->
             <div class="faqs">
                 <h4>Frequently Asked Questions</h4>
-                <ul>
-                    <li><a href="#">How do I integrate the API?</a></li>
-                    <li><a href="#">What is the pricing for consultants?</a></li>
+                <ul class="faq-list">
+                    <li class="faq-item">
+                        <button class="faq-question">How do I integrate the API?</button>
+                        <div class="faq-answer">
+                            <p>To integrate our API, you'll need to follow our detailed documentation, which provides step-by-step instructions for connecting your systems with our services. If you encounter any issues, our support team is available to assist with technical queries and ensure a smooth integration process.</p>
+                        </div>
+                    </li>
+                    <li class="faq-item">
+                        <button class="faq-question">What is the pricing for consultants?</button>
+                        <div class="faq-answer">
+                            <p>Our consulting services are priced based on the scope and complexity of the project. We offer customized quotes after discussing your specific needs and objectives. For a detailed pricing breakdown, please contact us directly.</p>
+                        </div>
+                    </li>
+                    <li class="faq-item">
+                        <button class="faq-question">What industries do you specialize in?</button>
+                        <div class="faq-answer">
+                            <p>WspaceAI specializes in a range of industries, including finance, healthcare, manufacturing, and technology. We tailor our solutions to meet the unique needs of each sector, ensuring effective and impactful results.</p>
+                        </div>
+                    </li>
+                    <li class="faq-item">
+                        <button class="faq-question">How long does it take to develop a mobile app?</button>
+                        <div class="faq-answer">
+                            <p>The timeline for mobile app development varies depending on the complexity of the project and the specific requirements. On average, it takes between 3 to 6 months to complete a mobile app from concept to launch. We provide a detailed timeline after assessing your project.</p>
+                        </div>
+                    </li>
+                    <li class="faq-item">
+                        <button class="faq-question">Can you customize solutions for specific business needs?</button>
+                        <div class="faq-answer">
+                            <p>Yes, we offer fully customized solutions designed to meet the unique requirements of your business. Our team works closely with you to understand your needs and deliver tailored solutions that align with your objectives.</p>
+                        </div>
+                    </li>
+                    <li class="faq-item">
+                        <button class="faq-question">What support do you provide after deployment?</button>
+                        <div class="faq-answer">
+                            <p>After deployment, we offer ongoing support to address any issues and ensure the smooth functioning of your solution. This includes regular updates, bug fixes, and technical assistance as needed.</p>
+                        </div>
+                    </li>
+                    <li class="faq-item">
+                        <button class="faq-question">How do you ensure data security in your solutions?</button>
+                        <div class="faq-answer">
+                            <p>We prioritize data security by implementing robust encryption protocols, secure access controls, and regular security audits. Our solutions are designed to protect sensitive information and comply with industry standards and regulations.</p>
+                        </div>
+                    </li>
+                    <li class="faq-item">
+                        <button class="faq-question">Do you offer training for using your solutions?</button>
+                        <div class="faq-answer">
+                            <p>Yes, we provide comprehensive training to ensure that your team can effectively use our solutions. This includes user guides, training sessions, and ongoing support to help you get the most out of our products and services.</p>
+                        </div>
+                    </li>
                 </ul>
             </div>
+
+            <!-- Chat Support -->
             <div class="chat-support">
-                <button id="chat-button">Chat with Us</button>
+                <button id="chat-button" class="chat-button">Chat with Us</button>
             </div>
         </div>
+
 
         <!-- Community Section -->
         <div class="resource-item">
@@ -733,6 +787,7 @@
             </div>
         </section>
     </footer>
+    <script src="scripts.js"></script>
 </body>
 
 </html>
