@@ -111,3 +111,49 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 });
+
+
+
+// scripts.js
+// Function to load section content
+function loadSection(section) {
+    const mainContent = document.getElementById('main-content');
+    const heroSection = document.querySelector('.hero-section');
+    const companyInfoSection = document.querySelector('.company-info');
+
+    if (section === 'home') {
+        // Show Hero and Company Info sections
+        heroSection.style.display = 'block';
+        companyInfoSection.style.display = 'block';
+        mainContent.innerHTML = ''; // Clear the main content since Home has its own content
+    } else {
+        // Hide Hero and Company Info sections
+        heroSection.style.display = 'none';
+        companyInfoSection.style.display = 'none';
+        
+        // Load the appropriate section content
+        fetch(`${section}-section.html`) // This will now correctly fetch 'contacts-section.html'
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Network response was not ok');
+                }
+                return response.text();
+            })
+            .then(data => {
+                mainContent.innerHTML = data;
+            })
+            .catch(error => {
+                console.error('Error loading section:', error);
+                mainContent.innerHTML = '<p>Error loading section. Please try again.</p>';
+            });
+    }
+}
+
+
+// Load the home section by default when the page first loads
+document.addEventListener('DOMContentLoaded', () => {
+    loadSection('home');
+});
+
+
+
